@@ -22,10 +22,9 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2 / 4;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 //TODO Specify total number of available coins
-                                  10000000000000000000ull
 //TODO ((uint64_t)(-1)) equals to 18446744073709551616 coins
 //TODO or you can define number explicitly UINT64_C(858986905600000000)
-const uint64_t MONEY_SUPPLY                                  = uint64_t(10000000000000000000);
+const uint64_t MONEY_SUPPLY                                  = 10000000000000000000ull;
 const unsigned EMISSION_SPEED_FACTOR                         = 13;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
