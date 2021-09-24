@@ -528,4 +528,4 @@ CurrencyBuilder& CurrencyBuilder::difficultyWindow(size_t val) {
   return *this;
 }
 
-};
+}
