@@ -84,8 +84,8 @@ bool Currency::generateGenesisBlock() {
     return false;
   }
 
-  m_genesisBlock.majorVersion = BLOCK_MAJOR_VERSION_1;
-  m_genesisBlock.minorVersion = BLOCK_MINOR_VERSION_0;
+  m_genesisBlock.majorVersion = BLOCK_MAJOR_VERSION_0;
+  m_genesisBlock.minorVersion = BLOCK_MINOR_VERSION_1;
   m_genesisBlock.timestamp = 0;
   m_genesisBlock.nonce = 70;
   if (m_testnet) {
@@ -128,7 +128,7 @@ size_t Currency::maxBlockCumulativeSize(uint64_t height) const {
 
 bool Currency::constructMinerTx(uint32_t height, size_t medianSize, uint64_t alreadyGeneratedCoins, size_t currentBlockSize,
   uint64_t fee, const AccountPublicAddress& minerAddress, Transaction& tx,
-  const BinaryArray& extraNonce=1, size_t maxOuts=1) const {
+  const BinaryArray& extraNonce, size_t maxOuts) const {
   tx.inputs.clear();
   tx.outputs.clear();
   tx.extra.clear();
